@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+    body {
+        @apply bg-primary text-white;
+    }
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .link::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -2px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+  }
+  
+  .link:hover {
+    color: grey;
+  }
+  
+  .link:hover::before {
+    width: 115%;
+  }
